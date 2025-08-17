@@ -1,0 +1,145 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container py-2">
+    <a [routerLink]="['/']">
+      <img [src]="appLogo" alt="Logo" height="25" class="d-inline-block align-text-top">
+    </a>
+    
+    <button class="navbar-toggler" type="button" title="Toggler" (click)="toggleMobileMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav" [class.show]="isMenuOpen">
+      <ul class="navbar-nav me-auto">
+        @for (menu of menus; track menu.id) {
+          <!-- Menu simple sans sous-menu -->
+          @if (!menu.hasDropdown) {
+            <li class="nav-item">
+              <a 
+                [routerLink]="menu.url" 
+                class="nav-link fw-medium" 
+                routerLinkActive="active" 
+                [routerLinkActiveOptions]="{exact: true}"
+                (click)="navigateTo(menu.url!)">
+                @if (menu.icon) {
+                  <i class="{{menu.icon}} me-1"></i>
+                }
+                {{ menu.label }}
+                @if (menu.badge) {
+                  <span class="badge ms-2" [ngClass]="getBadgeClass(menu.badge.type)">
+                    {{ menu.badge.text }}
+                  </span>
+                }
+              </a>
+            </li>
+          } @else {
+            <!-- Menu avec dropdown -->
+            <li class="nav-item dropdown" 
+              [class.show]="dropdownStates[menu.id]"
+              [attr.data-dropdown]="menu.id"
+              (mouseenter)="handleDropdownHover(menu.id, true)"
+              (mouseleave)="handleDropdownHover(menu.id, false)">
+                
+              <a class="nav-link dropdown-toggle fw-medium" 
+                href="javascript:void(0)" 
+                (click)="toggleDropdown(menu.id, $event)"
+                [class.active]="isParentActive(menu)"
+                [attr.aria-expanded]="dropdownStates[menu.id]">
+                @if (menu.icon) {
+                  <i class="{{menu.icon}} me-1"></i>
+                }
+                {{ menu.label }}
+                @if (menu.badge) {
+                  <span class="badge ms-2" [ngClass]="getBadgeClass(menu.badge.type)">
+                    {{ menu.badge.text }}
+                  </span>
+                }
+                <i class="bi bi-chevron-down ms-1"></i>
+              </a>
+                
+              @if (menu.children && menu.children.length > 0) {
+                <ul class="dropdown-menu" [class.show]="dropdownStates[menu.id]">
+                  @for (child of menu.children; track child.id) {
+                    <!-- Sous-menu simple -->
+                    @if (!child.children || child.children.length === 0) {
+                      <li>
+                        <a class="dropdown-item" 
+                          [routerLink]="child.url" 
+                          routerLinkActive="active"
+                          (click)="navigateTo(child.url)">
+                          @if (child.icon) {
+                            <i class="{{child.icon}} me-2"></i>
+                          }
+                          {{ child.label }}
+                          @if (child.badge) {
+                            <span class="badge ms-2" [ngClass]="getBadgeClass(child.badge.type)">
+                              {{ child.badge.text }}
+                            </span>
+                          }
+                        </a>
+                      </li>
+                    } @else {
+                      <!-- Sous-menu avec sous-sous-menu -->
+                      <li><hr class="dropdown-divider"></li>
+                      <li class="dropdown-submenu" 
+                        [class.show]="dropdownStates[child.id]"
+                        [attr.data-dropdown]="child.id"
+                        (mouseenter)="handleDropdownHover(child.id, true)"
+                        (mouseleave)="handleDropdownHover(child.id, false)">
+                        
+                        <a class="dropdown-item dropdown-toggle" 
+                          href="javascript:void(0)"
+                          (click)="toggleDropdown(child.id, $event)"
+                          [attr.aria-expanded]="dropdownStates[child.id]">
+                          @if (child.icon) {
+                            <i class="{{child.icon}} me-2"></i>
+                          }
+                          {{ child.label }}
+                          @if (child.badge) {
+                            <span class="badge ms-2" [ngClass]="getBadgeClass(child.badge.type)">
+                              {{ child.badge.text }}
+                            </span>
+                          }
+                          <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                          
+                        <ul class="dropdown-menu submenu" [class.show]="dropdownStates[child.id]">
+                          @for (subChild of child.children; track subChild.id) {
+                            <li>
+                              <a class="dropdown-item" 
+                                [routerLink]="subChild.url" 
+                                routerLinkActive="active"
+                                (click)="navigateTo(subChild.url)">
+                                @if (subChild.icon) {
+                                  <i class="{{subChild.icon}} me-2"></i>
+                                }
+                                {{ subChild.label }}
+                                @if (subChild.badge) {
+                                  <span class="badge ms-2" [ngClass]="getBadgeClass(subChild.badge.type)">
+                                    {{ subChild.badge.text }}
+                                  </span>
+                                }
+                              </a>
+                            </li>
+                          }
+                        </ul>
+                      </li>
+                    }
+                  }
+                </ul>
+              }
+            </li>
+          }
+        }
+      </ul>
+      
+      <div class="d-flex">
+        <button type="button" class="btn connect-button rounded-pill me-2" (click)="goToLogin()">
+          SE CONNECTER
+        </button>
+        <button type="button" class="btn btn-primary rounded-pill" (click)="goToGetStarted()">
+          COMMENCER
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

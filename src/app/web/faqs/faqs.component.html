@@ -1,0 +1,36 @@
+<!-- FAQ -->
+<section class="faq-section py-5">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title mb-5">Des questions ? On s’occupe de vous</h2>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="faq-content">
+          <div class="accordion" id="faqAccordion">
+            @for (faq of faqs; track $index) {
+              <div ngbAccordion>
+                <div ngbAccordionItem>
+                  <h2 ngbAccordionHeader>
+                    <button ngbAccordionButton class="accordion-button">{{ faq.question }}</button>
+                  </h2>
+                  <div ngbAccordionCollapse>
+                    <div ngbAccordionBody [style.white-space]="'pre-line'" style="text-align: justify;">
+                      <ng-template>{{ faq.answer }}</ng-template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="faq-image">
+          <img src="assets/images/logos/logo-sm.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

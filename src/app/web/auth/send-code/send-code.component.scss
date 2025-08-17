@@ -1,0 +1,83 @@
+
+
+
+.success-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-style: Italic;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.success-paragraphe {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.btn-continue {
+    background: linear-gradient(135deg, #fac21c 0%, #fac21c 100%);
+    border: none;
+    color: #000;
+    font-weight: 700;
+    padding: 11px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-top: 70px;
+
+    &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    color: #000;
+    }
+
+    &:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    }
+}
+
+.code-inputs {
+  display: flex;
+  gap: 20px; /* espace entre les cases */
+}
+
+.code-inputs input {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: linear-gradient(180.04deg, rgba(21, 34, 51, 0.43) 9.5%, rgba(43, 69, 104, 0.43) 51.53%, rgba(63, 102, 153, 0.43) 87.44%);
+    border: 1px solid;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    caret-color: white;
+}
+
+.code-inputs input:focus {
+    background: linear-gradient(180.04deg, rgba(21, 34, 51, 0.43) 9.5%, rgba(43, 69, 104, 0.43) 51.53%, rgba(63, 102, 153, 0.43) 87.44%);
+    border: 1px solid;
+//   background: linear-gradient(#0a1c33, #0a1c33) padding-box,
+//               linear-gradient(135deg, #00ff99, #00f0ff) border-box;
+}
+
+.resend {
+    font-style: italic;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}

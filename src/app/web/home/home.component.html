@@ -1,0 +1,179 @@
+<!-- Hero Section -->
+<section class="hero-section" [style.background-image]="'url(' + heroSectionBgImage + ')'">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="hero-title">
+          Streaming ivoirien<br> de
+          <span class="text-warning">proximité</span>
+        </h1>
+        <p class="hero-subtitle">
+          Regardez en streaming ou téléchargez des séries, des films
+          et documentaires de chez nous. Suivez également tous
+          les matchs du Championnat Africain en direct sur mobile.
+        </p>
+        <div class="">
+          <h6 class="m-0 text-uppercase">à PARTIR DE</h6>
+          <div>
+            <span class="fw-bold display-5">1.500</span>
+            <small>FCFA</small>
+          </div>
+        </div>
+
+        <button type="button" (click)="goToGetStarted()" class="btn btn-warning btn-lg rounded-pill mt-5 px-5">
+          TELECHARGER !
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/images/icons/buy.png" alt="">
+          </div>
+          <h4 class="fw-bold">Êtes-vous déjà abonné à Cinédrome ?</h4>
+          <p>Renseignez votre code  promo ici.</p>
+          <button type="button" (click)="getCodePromo()" class="btn btn-white rounded-pill">ENTREZ UN CODE PROMO</button>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="assets/images/icons/genial.png" alt="">
+          </div>
+          <h4 class="fw-bold">Des plans conçus pour vous</h4>
+          <p>
+            Vous aimez le divertissement, la Première Ligue ou les deux ?
+            Explorez nos 3 nouveaux plans pour choisir celui qui vous
+            convient le mieux.
+          </p>
+          <button type="button" (click)="choixPlan()" class="btn btn-white rounded-pill">CHOISISSEZ UN PLAN </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Exclusive Content -->
+<section class="exclusive-section py-5">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="fw-bold">Créations africaines exclusives</h2>
+      <p>Appréciez notre cinéma depuis le confort de votre téléphone / ordinateur.</p>
+    </div>
+    <div class="row">
+      @for (movie of exclusiveMovies; track $index) {
+        <div class="col-6 col-md-2 mb-4">
+          <div class="movie-card">
+            <img [src]="movie.image" alt="{{movie.title}}" class="img-fluid">
+            <div class="movie-overlay">
+              <!-- <h5>{{ movie.title }}</h5> -->
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Championship Section -->
+<section class="championship-section py-5" [style.background-image]="'url(' + championBg + ')'">
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6"></div>
+      <div class="col-lg-6 text-end text-center text-lg-end">
+        <div class="championship-content">
+          <h2 class="section-title mb-5">Le Championnat Africain <br>en direct</h2>
+          <p style="text-align: right; font-size: 14px; margin-left: 0;">
+            Diffusez tous les matchs de la Première <br> Ligue Africaine  en
+            direct sur votre mobile, <br>
+            regardez des faits saillants, <br>
+            des magazines et plus encore.
+          </p>
+          <div class="mt-5">
+            <h6 class="text-uppercase m-0">à PARTIR DE seulement</h6>
+            <div>
+              <span class="fw-bold display-5">3.500</span>
+              <small>FCFA</small>
+            </div>
+          </div>
+          <button class="btn btn-white rounded-pill btn-lg mt-5">
+            Regarder maintenant
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Movies Grid -->
+<section class="movies-section py-5">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="fw-bold">Replays à l’infini, dégustation visuelle unique</h2>
+      <p>Plus de films à succès, séries, de documentaires et d’émissions pour enfants.</p>
+    </div>
+
+    <div class="row">
+      @for (movie of replayMovies; track $index) {
+        <div class="col-6 col-md-2 mb-4">
+          <div class="movie-card">
+            <img [src]="movie.image" alt="{{ movie.image }}" class="img-fluid">
+            <div class="movie-overlay">
+              <!-- <h5>{{ movie.title }}</h5> -->
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Pourquoi vous allez adorer Cinédrome ?</h2>
+    <div class="row justify-content-center">
+      @for (reason of whyChooseUs; track $index) {
+        <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
+          <div class="reason-card text-center">
+            <div class="reason-icon-container mb-3">
+              <div class="reason-icon rounded-circle border-white d-flex justify-content-center align-items-center text-white mx-auto">
+                <img [src]="reason.icons[0]" alt="{{reason.title}}" class="img-fluid">
+              </div>
+            </div>
+            <h4 class="mb-3">{{ reason.title }}</h4>
+            <p>{{ reason.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Devices Section -->
+<section class="devices-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Appareils pris en charge</h2>
+    <div class="row px-5">
+      <div class="col-md-4 mb-4" *ngFor="let device of supportedDevices">
+        <div class="device-card">
+          <div class="device-icon mx-auto">
+            <img [src]="device.icon" alt="{{device.name}}" class="img-fluid">
+          </div>
+          <h4>{{ device.name }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<app-faqs></app-faqs>

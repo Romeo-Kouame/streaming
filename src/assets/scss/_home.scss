@@ -1,0 +1,339 @@
+.hero-section {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  padding: 100px 0;
+  color: white;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  
+  // Responsive
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  
+  // Responsive
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fac21c;
+  
+  // Responsive
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+// Responsive général pour la section hero
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .hero-title,
+  .hero-subtitle,
+  .hero-stats {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+}
+
+.features-section {
+  background: #0f1429;
+  color: white;
+}
+
+.feature-card {
+  background: #1a1f3a;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #fac21c;
+  margin-bottom: 1rem;
+  img {
+    height: 50px;
+  }
+}
+
+.exclusive-section,
+.movies-section {
+  background: #000;
+  color: white;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.movie-card {
+  position: relative;
+  // border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.championship-section {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  color: white;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.championship-content {
+  padding: 2rem 0;
+  
+}
+
+.championship-content h2,
+.championship-content p,
+.championship-content h6,
+.championship-content span,
+.championship-content small {
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2);
+}
+
+// .championship-content .section-title {
+//   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+//   -webkit-text-stroke: 0.8px rgba(255, 255, 255, 0.3);
+// }
+
+.championship-content .display-5 {
+  // text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+.championship-stats {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.championship-stats .stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.championship-stats .stat-label {
+  font-size: 1.1rem;
+}
+
+.why-section {
+  background: #0f1429;
+  color: white;
+  border-top: 1px solid #1a1f3a;
+  border-bottom: 1px solid #1a1f3a;
+}
+
+.reason-card {
+  text-align: center;
+  padding: 2rem;
+  background: #1a1f3a;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.reason-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.reason-icon {
+  width: 65px;
+  height: 65px;
+  background: #fac21c;
+  // border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reason-icon img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.devices-section {
+  background: #000;
+  color: white;
+}
+
+.device-card {
+  text-align: center;
+  padding: 2rem;
+  background: #1a1f3a;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.device-icon {
+  margin-bottom: 1rem;
+  width: 60px;
+}
+
+.faq-section {
+  background: #0a0e27;
+  color: white;
+}
+
+.accordion-item {
+  background: #1a1f3a;
+  border: 1px solid #2a2f4a;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.accordion-button {
+  background: #1a1f3a;
+  color: white;
+  border: none;
+  padding: 1.5rem;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #2a2f4a;
+  color: #fac21c;
+}
+
+.accordion-body {
+  background: #1a1f3a;
+  color: white;
+  padding: 1.5rem;
+}
+.accordion-button:after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffc107'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.btn-warning {
+  background-color: #fac21c; 
+  border-color: #fac21c;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease; // Ajout d'une transition
+}
+
+.btn-white {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #fac21c;
+    border-color: #fac21c;
+    transform: translateY(-2px); // Effet de lift au hover
+  }
+}
+
+.btn-warning:hover {
+  background-color: #fac21c;
+  border-color: #fac21c;
+  transform: translateY(-2px); // Effet de lift au hover
+}
+
+.btn-outline-light {
+  border-color: #fac21c;
+  color: #fac21c;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease; // Ajout d'une transition
+}
+
+.btn-outline-light:hover {
+  background-color: #fac21c;
+  border-color: #fac21c;
+  color: #000;
+}
+
+.faq-image img {
+  width: 650px;
+}
+
+@media (max-width: 768px) {
+  .faq-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+}

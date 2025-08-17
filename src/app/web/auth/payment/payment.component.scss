@@ -1,0 +1,110 @@
+
+.success-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-style: Italic;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.success-paragraphe {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.nav-pills {
+    background: linear-gradient(180.04deg, rgba(21, 34, 51, 0.43) 9.5%, rgba(43, 69, 104, 0.43) 51.53%, rgba(63, 102, 153, 0.43) 87.44%);
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #FFFFFF 0%, #999999 51.92%, #FFFBFB 100%);
+  border-radius: 40px;
+}
+
+.nav-link.active, .nav-pills .show > .nav-link {
+  background: #fac21c;
+  border: 1px solid;
+}
+.nav-link {
+  margin-bottom: 0px !important;
+  color: #fff !important;
+  border-left: 0px solid !important;
+  border-right: 0px solid !important;
+  border-top: 0px solid !important;
+  border-radius: 40px;
+  margin: 0;
+
+}
+.nav-tabs{
+  border-bottom: 0 !important;
+}
+.nav-image {
+    height: 27px;
+    width: 27px;
+    margin-left: 10px;
+    border-radius: 17px;
+}
+
+.custom-input {
+  background: linear-gradient(180.04deg, rgba(21, 34, 51, 0.43) 9.5%, rgba(43, 69, 104, 0.43) 51.53%, rgba(63, 102, 153, 0.43) 87.44%);
+  border-image-source: linear-gradient(180deg, #FFFFFF 0%, #999999 51.92%, #FFFBFB 100%);
+
+
+
+  // background: rgba(26, 31, 58, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 11px 20px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  &::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+  background: rgba(26, 31, 58, 0.9);
+  border-color: #FFD700;
+  box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+  color: white;
+  outline: none;
+  }
+
+  &:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.btn-continue {
+  background: linear-gradient(135deg, #fac21c 0%, #fac21c 100%);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  padding: 11px 30px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    color: #000;
+  }
+
+  &:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}

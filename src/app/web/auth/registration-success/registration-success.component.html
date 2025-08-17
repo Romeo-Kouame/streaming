@@ -1,0 +1,24 @@
+<!-- registration.component.html -->
+<div class="registration-container">
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <!-- Section Formulaire -->
+      <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+        <h1 class="success-title">Inscription réussie 🎉!</h1>
+        <p class="success-paragraphe m-0">Un code à 06 (six) chiffres vous a été transmis par SMS</p> <br>
+        <!-- <p class="success-paragraphe mb-3">Entrez le pour activer votre compte. </p> -->
+        <button type="submit" (click)="sendCode()" class="btn btn-continue w-100 rounded-pill">
+            ENTRER LE CODE
+        </button>
+
+      </div>
+      
+      <!-- Section Artwork (visible uniquement sur desktop) -->
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="faq-image">
+          <img src="assets/images/logos/logo-sm.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

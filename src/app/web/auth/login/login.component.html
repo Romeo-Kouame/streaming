@@ -1,0 +1,38 @@
+<div class="login-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="login-card">
+                    <h2 class="login-title text-center mb-4">
+                        Entrez votre numéro de téléphone pour commencer
+                    </h2>
+                    
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group mb-4">
+                        <input 
+                            type="tel" 
+                            class="form-control cine-input" 
+                            formControlName="phoneNumber"
+                            placeholder="Votre numéro de téléphone"
+                            [class.is-invalid]="loginForm.get('phoneNumber')?.invalid && loginForm.get('phoneNumber')?.touched">
+                            <div class="invalid-feedback" *ngIf="loginForm.get('phoneNumber')?.invalid && loginForm.get('phoneNumber')?.touched">
+                                Veuillez entrer un numéro de téléphone valide
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-warning btn-lg w-100 cine-btn"[disabled]="loginForm.invalid || isLoading">
+                            <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2"></span>
+                            {{ isLoading ? 'Connexion...' : 'Se connecter' }}
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-primary rounded-pill px-4" (click)="goHome()">
+                        <span class="text-uppercase">Retour à la page d’accueil</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

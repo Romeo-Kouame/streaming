@@ -1,0 +1,224 @@
+
+// .plans-page {
+//     background: #0a0e27;
+//     min-height: 100vh;
+//     color: white;
+// }
+
+// .plans-container {
+//     padding: 80px 0;
+//     min-height: calc(100vh - 140px);
+//     position: relative;
+// }
+
+// .plans-title {
+//     font-size: 3rem;
+//     font-weight: 700;
+//     color: white;
+//     margin-bottom: 3rem;
+// }
+
+// .plans-subtitle {
+//     font-size: 1rem;
+//     color: rgba(255, 255, 255, 0.8);
+// }
+
+// .plan-card {
+//     background: rgba(26, 31, 58, 0.9);
+//     border-radius: 20px;
+//     padding: 2rem;
+//     height: 100%;
+//     border: 2px solid rgba(255, 255, 255, 0.1);
+//     transition: all 0.3s ease;
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// .plan-card.featured {
+//     border-color: #ffd700;
+//     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(26, 31, 58, 0.9) 100%);
+//     transform: scale(1.05);
+// }
+
+// .plan-card.featured::before {
+//     content: 'POPULAIRE';
+//     position: absolute;
+//     top: 20px;
+//     right: -30px;
+//     background: #ffd700;
+//     color: #000;
+//     padding: 5px 40px;
+//     font-size: 0.8rem;
+//     font-weight: 700;
+//     transform: rotate(45deg);
+// }
+
+// .plan-card:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+// }
+
+// .plan-card.featured:hover {
+//     transform: scale(1.05) translateY(-10px);
+// }
+
+// .plan-header {
+//     text-align: center;
+//     margin-bottom: 2rem;
+// }
+
+// .plan-name {
+//     font-size: 1.5rem;
+//     font-weight: 600;
+//     color: #ffd700;
+//     margin-bottom: 1rem;
+// }
+
+// .plan-price {
+//     display: flex;
+//     align-items: baseline;
+//     justify-content: center;
+//     gap: 0.5rem;
+// }
+
+// .price-amount {
+//     font-size: 3rem;
+//     font-weight: 700;
+//     color: white;
+// }
+
+// .price-period {
+//     font-size: 1rem;
+//     color: rgba(255, 255, 255, 0.7);
+// }
+
+// .plan-features {
+//     margin-bottom: 2rem;
+// }
+
+// .feature-list {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// .feature-list li {
+//     display: flex;
+//     align-items: center;
+//     gap: 1rem;
+//     margin-bottom: 1rem;
+//     font-size: 1rem;
+// }
+
+// .feature-list i {
+//     color: #ffd700;
+//     font-size: 1.2rem;
+// }
+
+// .btn-plan {
+//     background: rgba(255, 255, 255, 0.1);
+//     border: 2px solid rgba(255, 255, 255, 0.2);
+//     color: white;
+//     font-weight: 600;
+//     padding: 15px 30px;
+//     border-radius: 10px;
+//     transition: all 0.3s ease;
+// }
+
+// .btn-plan:hover {
+//     background: rgba(255, 255, 255, 0.2);
+//     border-color: #ffd700;
+//     color: #ffd700;
+// }
+
+// .btn-featured {
+//     background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+//     border-color: #ffd700;
+//     color: #000;
+// }
+
+// .btn-featured:hover {
+//     background: linear-gradient(135deg, #ffed4a 0%, #fff59d 100%);
+//     transform: translateY(-2px);
+//     box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+// }
+
+// .newlester-section {
+//     border-top: 1px solid #434d76;
+//     background: #434d7661;
+//     color: white;
+// }
+
+// .faq-section {
+//     background: #0f1429;
+//     color: white;
+// }
+
+// .section-title {
+//     font-size: 2.5rem;
+//     font-weight: 700;
+//     color: white;
+//     margin-bottom: 3rem;
+// }
+
+// .accordion-item {
+//     background: #1a1f3a;
+//     border: 1px solid #2a2f4a;
+//     margin-bottom: 1rem;
+//     border-radius: 10px;
+// }
+
+// .accordion-button {
+//     background: #1a1f3a;
+//     color: white;
+//     border: none;
+//     padding: 1.5rem;
+//     font-weight: 600;
+// }
+
+// .accordion-button:not(.collapsed) {
+//     background: #2a2f4a;
+//     color: #ffd700;
+// }
+
+// .accordion-body {
+//     background: #1a1f3a;
+//     color: white;
+//     padding: 1.5rem;
+// }
+
+// .progress-indicators {
+//     position: fixed;
+//     bottom: 30px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     display: flex;
+//     gap: 10px;
+//     z-index: 1000;
+// }
+
+// .progress-dot {
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background: rgba(255, 255, 255, 0.3);
+//     transition: all 0.3s ease;
+// }
+
+// .progress-dot.active {
+//     background: #ffd700;
+//     transform: scale(1.2);
+// }
+
+// .faq-image {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;s
+//     height: 400px;
+// }
+
+// .chart {
+//     max-width: 100%;
+//     height: auto;
+// }
+

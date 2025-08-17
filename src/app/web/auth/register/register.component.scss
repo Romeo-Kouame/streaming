@@ -1,0 +1,257 @@
+.registration-container {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+
+  .registration-header {
+    .registration-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .registration-subtitle {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+  }
+
+  .registration-form-content {
+    max-width: 500px;
+
+    .form-label {
+      color: white;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .custom-input {
+      background: linear-gradient(180.04deg, rgba(21, 34, 51, 0.43) 9.5%, rgba(43, 69, 104, 0.43) 51.53%, rgba(63, 102, 153, 0.43) 87.44%);
+      border-image-source: linear-gradient(180deg, #FFFFFF 0%, #999999 51.92%, #FFFBFB 100%);
+
+
+
+      // background: rgba(26, 31, 58, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 11px 20px;
+      color: white;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-style: italic;
+      }
+
+      &:focus {
+        background: rgba(26, 31, 58, 0.9);
+        border-color: #FFD700;
+        box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+        color: white;
+        outline: none;
+      }
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .password-input-container {
+      position: relative;
+
+      .password-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        padding: 5px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #FFD700;
+        }
+
+        i {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      .form-check-input {
+        background: rgba(26, 31, 58, 0.8);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-top: 0.1rem;
+
+        &:checked {
+          background-color: #FFD700;
+          border-color: #FFD700;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+        }
+      }
+
+      .form-check-label {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+
+        .terms-text {
+          text-decoration: underline;
+          color: white;
+        }
+      }
+    }
+
+    .btn-continue {
+      background: linear-gradient(135deg, #fac21c 0%, #fac21c 100%);
+      border: none;
+      color: #000;
+      font-weight: 700;
+      padding: 11px 30px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+
+      &:hover:not(:disabled) {
+        background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        color: #000;
+      }
+
+      &:disabled {
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  // Artwork Section
+  .registration-artwork {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .artwork-container {
+      position: relative;
+      width: 400px;
+      height: 500px;
+    }
+
+    .number-design {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .number-zero {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        width: 180px;
+        height: 300px;
+
+        .zero-outer {
+          width: 100%;
+          height: 100%;
+          border: 4px solid #FFD700;
+          border-radius: 50%;
+          position: relative;
+        }
+
+        .zero-inner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60px;
+          height: 60px;
+          border: 3px solid #FFD700;
+          border-radius: 50%;
+        }
+      }
+
+      .number-one {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+
+        .one-vertical {
+          width: 8px;
+          height: 300px;
+          background: #FFD700;
+          border-radius: 4px;
+          position: relative;
+        }
+
+        .one-top {
+          position: absolute;
+          top: 0;
+          left: -20px;
+          width: 30px;
+          height: 8px;
+          background: #FFD700;
+          border-radius: 4px;
+          transform: rotate(45deg);
+          transform-origin: right center;
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    .registration-header {
+      .registration-title {
+        font-size: 2.5rem;
+      }
+
+      .registration-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    .registration-form-content {
+      .custom-input {
+        padding: 12px 16px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 20px 0;
+
+    .registration-header {
+      .registration-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}

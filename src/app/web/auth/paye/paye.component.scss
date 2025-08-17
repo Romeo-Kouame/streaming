@@ -1,0 +1,46 @@
+
+.success-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-style: Italic;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.success-paragraphe {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.btn-continue {
+  background: linear-gradient(135deg, #fac21c 0%, #fac21c 100%);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  padding: 11px 30px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+    color: #000;
+  }
+
+  &:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}

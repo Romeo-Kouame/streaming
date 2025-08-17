@@ -1,0 +1,152 @@
+//
+//Footer
+//
+
+.footer {
+  // background: #0a0e27;
+  background: #000;
+  color: white;
+  padding: 3rem 0 1rem;
+  border-top: 1px solid #1a1f3a;
+}
+
+.footer-section h5 {
+  color: #ffd700;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-section h6 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+}
+
+/* Amélioration des boutons sociaux */
+.social-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+  background: #ffd700;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.footer-divider {
+  border-color: 1px solid #1a1f3a;
+  margin: 2rem 0 1rem;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 991px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+  
+  .social-icons-container {
+    justify-content: center;
+    margin-top: 15px;
+    gap: 12px;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 0 1rem;
+  }
+  
+  .footer a {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .social-icons-container {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .footer-copyright {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+/* Style alternatif - Boutons en grille sur mobile */
+@media (max-width: 576px) {
+  .social-icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    max-width: 200px;
+    margin: 20px auto;
+  }
+  
+  .social-link {
+    width: 50px;
+    height: 50px;
+  }
+}
